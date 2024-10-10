@@ -116,6 +116,7 @@
             android:id="@+id/btnListar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="TelaLista"
             android:text="Listar" />
 
     </LinearLayout>

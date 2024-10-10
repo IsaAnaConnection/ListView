@@ -1,5 +1,6 @@
 package com.example.aula0210;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,6 +34,23 @@ public class MainActivity extends AppCompatActivity {
         edtCpf = findViewById(R.id.edtCpf);
         edtTelefone= findViewById(R.id.edtTelefone);
         edtListar = findViewById(R.id.edtListar);
+
+        Intent intent = getIntent();
+        if (intent != null) {
+            int id = intent.getIntExtra("id", -1);
+            String nome = intent.getStringExtra("nome");
+            String cpf = intent.getStringExtra("cpf");
+            String telefone = intent.getStringExtra("telefone");
+
+            // Preenche os campos se o ID for válido
+            if (id != -1) {
+                edtId.setText(String.valueOf(id));
+                edtNome.setText(nome);
+                edtCpf.setText(cpf);
+                edtTelefone.setText(telefone);
+            }
+        }
+
     }
     public void novo (View view){
         edtNome.setText(null);
