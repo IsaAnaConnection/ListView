@@ -8,116 +8,296 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFFFF"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView5"
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Banco de Dados"
-            android:textSize="24sp" />
-
-        <EditText
-            android:id="@+id/edtId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="ID"
-            android:inputType="text"
-            android:onClick="novo" />
-
-        <EditText
-            android:id="@+id/edtNome"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="NOME"
-            android:inputType="text" />
-
-        <EditText
-            android:id="@+id/edtCpf"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="CPF"
-            android:inputType="text" />
-
-        <EditText
-            android:id="@+id/edtTelefone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="TELEFONE"
-            android:inputType="text" />
+            android:layout_height="10dp" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="80dp"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btnNovo"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:onClick="novo"
-                android:text="Novo"
-                android:textSize="10sp" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="78dp"
+                android:layout_height="67dp"
+                android:paddingTop="5dp"
+                app:srcCompat="@drawable/logo_app_db" />
 
-            <Button
-                android:id="@+id/btnSalvar"
+            <TextView
+                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:baselineAligned="false"
-                android:onClick="salvar"
-                android:text="Salvar"
-                android:textSize="10sp" />
+                android:fontFamily="@font/poppins_bold"
+                android:paddingTop="20dp"
+                android:text="DB"
+                android:textColor="#215574"
+                android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/btnConsultar"
+            <TextView
+                android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="consultar"
-                android:text="Consultar"
-                android:textSize="10sp" />
+                android:fontFamily="@font/poppins_bold"
+                android:text="Connection"
+                android:textColor="#092B40"
+                android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/btnExcluir"
+            <Space
+                android:layout_width="120dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txtSair"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="excluir"
-                android:text="Excluir"
-                android:textSize="10sp" />
-
-            <Button
-                android:id="@+id/btnAlterar"
-                android:layout_width="101dp"
-                android:layout_height="wrap_content"
-                android:onClick="alterar"
-                android:text="Alterar"
-                android:textSize="10sp" />
+                android:fontFamily="@font/poppins_bold"
+                android:paddingTop="10dp"
+                android:text="X"
+                android:textColor="#000000"
+                android:textSize="28sp" />
 
         </LinearLayout>
 
-        <EditText
-            android:id="@+id/edtListar"
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:ems="10"
-            android:gravity="start|top"
-            android:hint="Listagem"
-            android:inputType="textMultiLine" />
+            android:layout_height="14dp" />
 
-        <Button
-            android:id="@+id/btnListar"
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="Cadastre, consulte, atualize, exclua"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="todos os seus dados"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingLeft="40dp"
+            android:text="ID"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtId"
+            android:layout_width="320dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Insira o ID"
+            android:inputType="text"
+            android:paddingStart="12dp"
+            android:paddingLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#474646"
+            android:textSize="14sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="18dp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingLeft="40dp"
+            android:text="Nome"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtNome"
+            android:layout_width="320dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Insira o Nome"
+            android:inputType="text"
+            android:paddingStart="12dp"
+            android:paddingLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#474646"
+            android:textSize="14sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="18dp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingLeft="40dp"
+            android:text="CPF"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtCpf"
+            android:layout_width="320dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Insira o CPF"
+            android:inputType="text"
+            android:paddingStart="12dp"
+            android:paddingLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#474646"
+            android:textSize="14sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="18dp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingLeft="40dp"
+            android:text="Telefone"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtTelefone"
+            android:layout_width="320dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Insira o Telefone"
+            android:inputType="text"
+            android:paddingStart="12dp"
+            android:paddingLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#474646"
+            android:textSize="14sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="28dp" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="TelaLista"
-            android:text="Listar" />
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="35dp"
+            android:paddingRight="20dp">
+
+            <Button
+                android:id="@+id/btnNovo"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#215574"
+                android:fontFamily="@font/poppins_bold"
+                android:onClick="novo"
+                android:text="Novo"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="10dp" />
+
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnSalvar"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#215574"
+                android:fontFamily="@font/poppins_bold"
+                android:onClick="salvar"
+                android:text="Salvar"
+                android:textColor="#FFFFFFFF"
+                app:cornerRadius="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="35dp"
+            android:paddingRight="20dp">
+
+            <Button
+                android:id="@+id/btnConsultar"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#215574"
+                android:fontFamily="@font/poppins_bold"
+                android:onClick="consultar"
+                android:text="Consultar"
+                android:textColor="#FFFFFFFF"
+                app:cornerRadius="10dp" />
+
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnExcluir"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#215574"
+                android:fontFamily="@font/poppins_bold"
+                android:onClick="excluir"
+                android:text="Excluir"
+                android:textColor="#FFFFFFFF"
+                app:cornerRadius="10dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAlterar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#215574"
+            android:fontFamily="@font/poppins_bold"
+            android:onClick="alterar"
+            android:text="Alterar"
+            android:textColor="#FFFFFFFF"
+            app:cornerRadius="10dp" />
 
     </LinearLayout>
 
