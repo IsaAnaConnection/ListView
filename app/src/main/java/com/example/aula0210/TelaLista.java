@@ -73,8 +73,7 @@ public class TelaLista extends AppCompatActivity {
             startActivity(intent);
             return true;  // Ação tratada
         } else if (id == R.id.sair) {
-            finish();
-            System.exit(0);
+            finishAffinity();
             return true;  // Ação tratada
         }
 

@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -31,7 +30,6 @@
                 android:layout_height="67dp"
                 android:paddingTop="5dp"
                 app:srcCompat="@drawable/logo_app_db" />
-
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
@@ -41,7 +39,6 @@
                 android:text="DB"
                 android:textColor="#215574"
                 android:textSize="18sp" />
-
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
@@ -50,11 +47,9 @@
                 android:text="Connection"
                 android:textColor="#092B40"
                 android:textSize="18sp" />
-
             <Space
-                android:layout_width="120dp"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content" />
-
             <TextView
                 android:id="@+id/txtSair"
                 android:layout_width="wrap_content"
@@ -64,7 +59,6 @@
                 android:text="X"
                 android:textColor="#000000"
                 android:textSize="28sp" />
-
         </LinearLayout>
 
         <Space
@@ -93,10 +87,6 @@
             android:textColor="#000000"
             android:textSize="14sp" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="12dp" />
-
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
@@ -121,7 +111,8 @@
             android:paddingLeft="20dp"
             android:textColor="#000000"
             android:textColorHint="#474646"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:onClick="novo" />
 
         <Space
             android:layout_width="match_parent"
@@ -145,13 +136,14 @@
             android:background="@drawable/custom_input"
             android:ems="10"
             android:fontFamily="@font/poppins_medium"
-            android:hint="Insira o Nome"
+            android:hint="Insira o nome"
             android:inputType="text"
             android:paddingStart="12dp"
             android:paddingLeft="20dp"
             android:textColor="#000000"
             android:textColorHint="#474646"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:onClick="novo"/>
 
         <Space
             android:layout_width="match_parent"
@@ -181,7 +173,7 @@
             android:paddingLeft="20dp"
             android:textColor="#000000"
             android:textColorHint="#474646"
-            android:textSize="14sp" />
+            android:textSize="14sp"/>
 
         <Space
             android:layout_width="match_parent"
@@ -205,7 +197,7 @@
             android:background="@drawable/custom_input"
             android:ems="10"
             android:fontFamily="@font/poppins_medium"
-            android:hint="Insira o Telefone"
+            android:hint="TELEFONE"
             android:inputType="text"
             android:paddingStart="12dp"
             android:paddingLeft="20dp"
@@ -217,13 +209,13 @@
             android:layout_width="match_parent"
             android:layout_height="28dp" />
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:orientation="horizontal"
-            android:paddingLeft="35dp"
-            android:paddingRight="20dp">
+            android:layout_gravity="center"
+            android:gravity="center">
 
             <Button
                 android:id="@+id/btnNovo"
@@ -233,6 +225,7 @@
                 android:fontFamily="@font/poppins_bold"
                 android:onClick="novo"
                 android:text="Novo"
+                android:textSize="10sp"
                 android:textColor="#FFFFFF"
                 app:cornerRadius="10dp" />
 
@@ -246,19 +239,19 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#215574"
                 android:fontFamily="@font/poppins_bold"
+                android:textSize="10sp"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="10dp"
                 android:onClick="salvar"
-                android:text="Salvar"
-                android:textColor="#FFFFFFFF"
-                app:cornerRadius="10dp" />
+                android:text="Salvar"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:orientation="horizontal"
-            android:paddingLeft="35dp"
-            android:paddingRight="20dp">
+            android:layout_gravity="center"
+            android:gravity="center">
 
             <Button
                 android:id="@+id/btnConsultar"
@@ -266,10 +259,11 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#215574"
                 android:fontFamily="@font/poppins_bold"
+                android:textSize="10sp"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="10dp"
                 android:onClick="consultar"
-                android:text="Consultar"
-                android:textColor="#FFFFFFFF"
-                app:cornerRadius="10dp" />
+                android:text="Consultar" />
 
             <Space
                 android:layout_width="15dp"
@@ -281,24 +275,32 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#215574"
                 android:fontFamily="@font/poppins_bold"
+                android:textSize="10sp"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="10dp"
                 android:onClick="excluir"
-                android:text="Excluir"
-                android:textColor="#FFFFFFFF"
-                app:cornerRadius="10dp" />
+                android:text="Excluir"/>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnAlterar"
-            android:layout_width="150dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_gravity="center"
-            android:backgroundTint="#215574"
-            android:fontFamily="@font/poppins_bold"
-            android:onClick="alterar"
-            android:text="Alterar"
-            android:textColor="#FFFFFFFF"
-            app:cornerRadius="10dp" />
+            android:gravity="center">
 
+            <Button
+                android:id="@+id/btnAlterar"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#215574"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="10sp"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="10dp"
+                android:onClick="alterar"
+                android:text="Alterar"/>
+
+        </LinearLayout>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
