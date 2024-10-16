@@ -50,6 +50,7 @@
             <Space
                 android:layout_width="130dp"
                 android:layout_height="wrap_content" />
+
             <TextView
                 android:id="@+id/txtSair"
                 android:layout_width="wrap_content"
@@ -197,7 +198,7 @@
             android:background="@drawable/custom_input"
             android:ems="10"
             android:fontFamily="@font/poppins_medium"
-            android:hint="TELEFONE"
+            android:hint="Insira o telefone"
             android:inputType="text"
             android:paddingStart="12dp"
             android:paddingLeft="20dp"
@@ -218,15 +219,15 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/btnNovo"
+                android:id="@+id/btnSalvar"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#215574"
                 android:fontFamily="@font/poppins_bold"
-                android:onClick="novo"
-                android:text="Novo"
-                android:textSize="10sp"
+                android:onClick="salvar"
+                android:text="Salvar"
                 android:textColor="#FFFFFF"
+                android:textSize="10sp"
                 app:cornerRadius="10dp" />
 
             <Space
@@ -234,16 +235,17 @@
                 android:layout_height="wrap_content" />
 
             <Button
-                android:id="@+id/btnSalvar"
+                android:id="@+id/btnAlterar"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#215574"
                 android:fontFamily="@font/poppins_bold"
-                android:textSize="10sp"
+                android:onClick="alterar"
+                android:text="Alterar"
                 android:textColor="#FFFFFF"
-                app:cornerRadius="10dp"
-                android:onClick="salvar"
-                android:text="Salvar"/>
+                android:textSize="10sp"
+                app:cornerRadius="10dp" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -289,18 +291,7 @@
             android:layout_gravity="center"
             android:gravity="center">
 
-            <Button
-                android:id="@+id/btnAlterar"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#215574"
-                android:fontFamily="@font/poppins_bold"
-                android:textSize="10sp"
-                android:textColor="#FFFFFF"
-                app:cornerRadius="10dp"
-                android:onClick="alterar"
-                android:text="Alterar"/>
-
         </LinearLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
